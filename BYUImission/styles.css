@@ -1,0 +1,80 @@
+/* General styles */
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px; /* Adjusted font size for readability */
+    line-height: 1.5; /* Slightly increased line spacing */
+    margin: 0;
+    padding: 0;
+    background-color: #fff; 
+    color: #333;
+}
+
+/* Content container */
+.content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px; /* Increased padding for more white space */
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+/* Inner content container */
+.inner-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Header styles */
+.title {
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 40px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.title h2 {
+    font-size: 20px;
+    color: #006EB6; 
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Main content styles */
+main p {
+    text-align: justify; /* Aligned text for a formal look */
+    margin: 20px 0;
+}
+
+main p em {
+    font-style: italic;
+}
+
+/* Ordered list styles */
+.does-list {
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+.does-list li {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer .logo {
+    width: 150px; /* Adjusted size for better proportion */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
