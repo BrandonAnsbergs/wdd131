@@ -1,0 +1,201 @@
+/* cool-pics.css */
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: 'Mooli', sans-serif;
+    --border-color: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --image-size: 250px;
+}
+
+body {
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    background-color: #f0f0f0;
+}
+
+header,
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 10px;
+    text-align: center;
+    font-family: var(--secondary-font);
+}
+
+header h1,
+footer p {
+    margin: 0;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* Hide by default */
+    flex-direction: column;
+}
+
+header nav ul.show {
+    display: flex; /* Show when toggled */
+}
+
+header nav ul li {
+    margin: 10px 0;
+}
+
+header nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+    background-color: var(--primary-color);
+}
+
+#menuButton {
+    background-color: transparent;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.2em;
+    cursor: pointer;
+    display: block; /* Always display the menu button */
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h2 {
+    font-family: var(--secondary-font);
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.gallery {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    padding: 0;
+}
+
+figure {
+    width: var(--image-size);
+    height: var(--image-size);
+    border: 10px solid var(--border-color);
+    box-shadow: 5px 5px 5px var(--shadow-color);
+    overflow: hidden;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Media queries */
+@media (max-width: 699px) {
+    main {
+        max-width: 350px; /* Set max-width for small screens */
+    }
+
+    .gallery {
+        grid-template-columns: 1fr; /* 1 column */
+    }
+
+    header nav ul {
+        display: none; /* Hide by default on small screens */
+    }
+
+    header nav ul.show {
+        display: flex; /* Show when toggled */
+    }
+}
+
+@media (min-width: 700px) and (max-width: 999px) {
+    main {
+        max-width: 700px; /* Set max-width for medium screens */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        display: none; /* Hide by default on medium screens */
+        flex-direction: row; /* Display horizontally when shown */
+    }
+
+    header nav ul.show {
+        display: flex; /* Show when toggled */
+        flex-direction: row; /* Ensure horizontal display */
+    }
+
+    header nav ul li {
+        margin: 0 10px; /* Adjust margin for horizontal display */
+    }
+}
+
+@media (min-width: 1000px) {
+    main {
+        max-width: 1000px; /* Set max-width for large screens */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+
+    header nav {
+        flex-direction: row;
+    }
+
+    header nav ul {
+        display: flex; /* Always show on large screens */
+        flex-direction: row;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    #menuButton {
+        display: none; /* Hide menu button on large screens */
+    }
+}
