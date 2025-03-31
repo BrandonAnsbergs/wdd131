@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+:root {
+--primary-color: #1B98E0;
+--secondary-color: #59c3c3;
+--text-dark: #333;
+--text-light: #ebebeb;
+--primary-font: Arial, Helvetica,sans-serif;
+--secondary-font: "Amatic SC", sans-serif;
+}
+
+header {
+    display:flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.site_logo {
+    height: 80px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+body {
+    font-family: var(--secondary-font);
+}
+
+.search_row {
+    display: flex;
+    img{
+        height: 16px;
+    }
+    input {
+        width: 100%;
+    }
+}
+
+.recipe {
+    border: 1px solid #000;
+    
+}

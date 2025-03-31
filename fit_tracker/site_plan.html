@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker - Site Plan</title>
+    <meta name="description" content="Site plan for the Fitness Tracker personal web application project in WDD 131.">
+    <meta name="author" content="[Brandon Ansbergs]">
+    <link rel="stylesheet" href="styles/site-plan.css">
+</head>
+<body>
+    <header>
+        <h1>Fitness Tracker - Site Plan</h1>
+        <nav>
+            <ul>
+                <li><a href="#purpose">Purpose</a></li>
+                <li><a href="#audience">Audience</a></li>
+                <li><a href="#dynamic">Dynamic Elements</a></li>
+                <li><a href="#branding">Branding</a></li>
+                <li><a href="#content">Content</a></li>
+                <li><a href="#wireframes">Wireframes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="purpose">
+            <h2>Purpose</h2>
+            <p>The purpose of the Fitness Tracker website is to empower users to take control of their fitness journey. It provides tools to easily log workouts, track progress over time, and access helpful resources like exercise recommendations, nutritional guidance, and practical fitness tips, motivating users to stay consistent and achieve their health goals.</p>
+        </section>
+
+        <section id="audience">
+            <h2>Audience</h2>
+            <p>This site targets individuals actively pursuing fitness goals, ranging from beginners seeking guidance to experienced enthusiasts wanting a simple way to monitor their activity. The audience includes those interested in weightlifting, cardio, general fitness, and improving their diet. They are likely looking for a straightforward, user-friendly platform accessible on desktop or mobile devices to keep track of their efforts and find motivation and information.</p>
+            <ul>
+                <li>**Needs:** Easy workout logging, progress visualization, reliable fitness/nutrition info.</li>
+                <li>**Motivations:** Improve health, build strength, lose weight, stay consistent, learn new exercises/diets.</li>
+                <li>**Technical Skill:** Varies from basic web users to moderately tech-savvy individuals.</li>
+            </ul>
+        </section>
+
+        <section id="dynamic">
+            <h2>Description of Dynamic Elements (JavaScript)</h2>
+            <p>JavaScript will be used extensively on the 'Track' page and potentially other areas to enhance user experience:</p>
+            <ul>
+                <li><strong>Workout Logging (Track Page):</strong>
+                    <ul>
+                        <li>**DOM Interaction:** Select the workout input form, listen for the 'submit' event. Select the workout list area (`<ul>`).</li>
+                        <li>**Data Handling:** Create JavaScript `Object`s for each workout entry (containing date, exercise, duration, description). Store these objects in an `Array`.</li>
+                        <li>**Local Storage:** Use `localStorage` to save the workout array, allowing data to persist between browser sessions. Use `JSON.stringify` to save and `JSON.parse` to retrieve.</li>
+                        <li>**Dynamic Content Update:** When a workout is added or deleted, dynamically update the HTML of the workout list using DOM manipulation (e.g., setting `innerHTML` or using `createElement`, `appendChild`). Array methods like `map()` or `forEach()` will be used to generate the list items.</li>
+                        <li>**Conditional Branching:** Check if there are existing workouts in `localStorage` on page load. Display a "No workouts logged yet" message if the array is empty.</li>
+                    </ul>
+                </li>
+                 <li><strong>Workout Deletion (Track Page):</strong>
+                    <ul>
+                         <li>**DOM Interaction:** Add event listeners (likely directly in the HTML via `onclick` or dynamically added) to 'Delete' buttons associated with each workout entry.</li>
+                         <li>**Data Handling:** Use the workout's index in the array to identify which entry to remove. Use the `splice()` array method to remove the item. Update `localStorage`.</li>
+                         <li>**Dynamic Content Update:** Re-render the workout list after deletion.</li>
+                    </ul>
+                 </li>
+                <li><strong>Exercise Recommendations (Exercises Page - Potential):</strong>
+                    <ul>
+                         <li>**DOM Interaction:** Select elements to display exercises.</li>
+                         <li>**Data Handling:** Could potentially filter or sort exercises based on user input (e.g., muscle group) using array methods like `filter()`. Exercise data could be stored in an array of objects.</li>
+                         <li>**Dynamic Content Update:** Display the filtered/sorted exercises dynamically.</li>
+                    </ul>
+                </li>
+                 <li><strong>Progress Visualization (Optional Enhancement - e.g., on Home or Track Page):**</strong>
+                     <ul>
+                         <li>As shown in the example code, a library like Chart.js could be used.</li>
+                         <li>**DOM Interaction:** Select the `canvas` element.</li>
+                         <li>**Data Handling:** Process the `workouts` array (using `map()` or `reduce()`) to extract data suitable for charting (e.g., duration over time).</li>
+                         <li>**Dynamic Content Update:** Generate or update the chart based on the workout data.</li>
+                    </ul>
+                 </li>
+                <li><strong>General Requirements:**</strong>
+                    <ul>
+                        <li>**Organization:** Code will be organized into multiple functions (e.g., `addWorkout`, `deleteWorkout`, `renderWorkoutList`, `loadWorkouts`).</li>
+                        <li>**ES Modules:** JavaScript code can be structured using ES Modules (`import`/`export`) for better organization, especially if scripts become larger.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="branding">
+            <h2>Branding</h2>
+            <h3>Website Logo</h3>
+            <img src="images/logo.png" alt="Fitness Tracker Logo Placeholder" width="150">
+            <p><em>Instructions: Create or choose a logo. Save it in an `images` folder inside `fitnesstrack`, and update the `src` attribute above. I used FreeLogoDesign to create this logo.</em></p>
+
+            <h3>Colors</h3>
+            <ul class="color-palette">
+                <li>Primary (Header, Buttons): <span class="swatch" style="background-color: #0074D9;"></span> #0074D9</li>
+                <li>Primary Hover: <span class="swatch" style="background-color: #005bb5;"></span> #005bb5</li>
+                <li>Accent (Delete Button): <span class="swatch" style="background-color: #ff4136;"></span> #ff4136</li>
+                <li>Accent Hover: <span class="swatch" style="background-color: #e60000;"></span> #e60000</li>
+                <li>Background Light: <span class="swatch" style="background-color: #f4f4f4;"></span> #f4f4f4</li>
+                <li>Background White: <span class="swatch" style="background-color: #ffffff; border: 1px solid #ccc;"></span> #ffffff</li>
+                <li>Text (Header): <span class="swatch" style="background-color: #ffffff; border: 1px solid #ccc;"></span> White</li>
+                <li>Text (Body): <span class="swatch" style="background-color: #333333;"></span> Dark Gray/Black (e.g., #333333)</li>
+            </ul>
+
+            <h3>Fonts</h3>
+            <ul>
+                <li>Navigation/Body Text: Arial, sans-serif (Considering adding a more distinct heading font if desired)</li>
+                <li>Fallback: sans-serif</li>
+            </ul>
+        </section>
+
+        <section id="content">
+            <h2>Content</h2>
+            <p>Outline of content for each page:</p>
+
+            <h3>Home Page</h3>
+            <ul>
+                <li>**Goal:** Introduce the website, highlight key features, and provide calls to action.</li>
+                <li>**Text:**
+                    <ul>
+                        <li>Hero Section: Welcome message, brief description, "Get Started" button.</li>
+                        <li>Features Section: Headings and short descriptions for logging, progress visualization, and learning resources.</li>
+                        <li>Quick Log Section (Optional on Home): Basic form for quick workout entry (Date, Type, Duration).</li>
+                        <li>Recent Workouts (Optional on Home): Display a few recent entries.</li>
+                        <li>Progress Overview (Optional on Home): Simple chart or summary.</li>
+                        <li>Testimonials: User quotes about the site's benefits.</li>
+                        <li>Call-to-Action: Encourage users to log their first workout.</li>
+                    </ul>
+                </li>
+                <li>**Images:** Hero background image (fitness-related), potentially icons for features.</li>
+            </ul>
+
+            <h3>Track Page </h3>
+            <ul>
+                <li>**Goal:** Allow users to input detailed workout logs and view/manage their past entries.</li>
+                <li>**Text:**
+                    <ul>
+                        <li>Form Heading: "Log Your Workout" or similar.</li>
+                        <li>Form Fields/Labels: Date, Exercise/Workout Type, Duration (minutes), Description/Notes.</li>
+                        <li>Submit Button: "Add Workout" / "Log Workout".</li>
+                        <li>Logged Workouts Heading: "Your Workout History" / "Logged Workouts".</li>
+                        <li>Workout List Area: Placeholder text if no workouts exist ("No workouts logged yet.").</li>
+                        <li>Workout Entry Display: Show Date, Type, Duration, Description for each logged item.</li>
+                        <li>Delete Button: Button next to each entry to remove it.</li>
+                    </ul>
+                </li>
+                <li>**Images:** Minimal images needed, perhaps icons for form fields or workout types if desired. Focus is on the form and data display.</li>
+            </ul>
+
+            <h3>Tips Page </h3>
+            <ul>
+                <li>**Goal:** Provide actionable advice on fitness, exercise technique, motivation, and recovery.</li>
+                <li>**Text:**
+                    <ul>
+                        <li>Page Title: "Fitness Tips & Advice".</li>
+                        <li>Sections/Articles: Organize tips by category (e.g., Workout Tips, Nutrition Tips, Motivation Hacks, Recovery Strategies).</li>
+                        <li>Content: Short, digestible tips in paragraphs or bullet points. Focus on practical advice.</li>
+                    </ul>
+                </li>
+                <li>**Images:** Images related to specific tips (e.g., demonstrating a stretch, healthy food, workout gear).</li>
+            </ul>
+
+            <h3>Exercises Page</h3>
+            <ul>
+                <li>**Goal:** Offer a reference library of exercises, potentially categorized by muscle group or equipment.</li>
+                <li>**Text:**
+                    <ul>
+                        <li>Page Title: "Exercise Library" / "Workout Ideas".</li>
+                        <li>Categories: Headings for different exercise types (e.g., Chest, Back, Legs, Cardio, Bodyweight).</li>
+                        <li>Exercise Descriptions: Name of the exercise, instructions on how to perform it, target muscles.</li>
+                        <li>Recommended Splits/Routines: Example workout routines (e.g., Push-Pull-Legs, Full Body).</li>
+                    </ul>
+                </li>
+                <li>**Images/Diagrams:** Illustrations or photos demonstrating correct exercise form.</li>
+            </ul>
+
+             <h3>Nutrition Page</h3>
+             <ul>
+                <li>**Goal:** Provide guidance on healthy eating, meal planning, and nutritional information relevant to fitness goals.</li>
+                 <li>**Text:**
+                     <ul>
+                         <li>Page Title: "Nutrition Guide".</li>
+                         <li>Sections: Topics like Macronutrients, Micronutrients, Hydration, Meal Timing, Healthy Recipes, Diet Examples (e.g., balanced, high-protein).</li>
+                         <li>Content: Informative text, possibly recipe instructions, sample meal plans.</li>
+                     </ul>
+                 </li>
+                 <li>**Images:** Photos of healthy foods, prepared meals, infographics about nutrition.</li>
+             </ul>
+        </section>
+
+        <section id="wireframes">
+            <h2>Wireframes</h2>
+            <p>Wireframes outlining the basic structure and layout of the main pages.</p>
+
+            <h3>Home Page Wireframe</h3>
+            <img src="images/Home_wire.png" alt="Home Page Wireframe Placeholder" width="600">
+             <p><em>Instructions: Create a wireframe for the home page. Save it in the `images` folder and update the `src` attribute above. Show header/nav, hero, features, content blocks, footer.</em></p>
+
+            <h3>Child Page Wireframe (Track Page Example)</h3>
+            <img src="images/Child_wire.png" alt="Track Page Wireframe Placeholder" width="600">
+            <p><em>Instructions: Create a wireframe for one child page (e.g., Track Page). Save it in the `images` folder and update the `src` attribute above. Show header/nav, input form area, logged workouts list area, footer.</em></p>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Fitness Tracker Site Plan | [Brandon Ansbergs] | WDD 131</p>
+    </footer>
+    <script>
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

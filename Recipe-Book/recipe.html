@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="recipe.css">
+    <script src="recipe.js" defer></script>
+</head>
+<body>
+    <header>
+        <img class="site_logo" src="images/recipe-book.png" alt="Recipe book logo">
+        <h1>RecipeBook</h1>
+    </header>
+    <main>
+        <form action="#">
+            <div class="search_row">
+                <input type="search" placeholder="Find a recipe" />
+                <button type="button"><img src="images/search.svg" alt="search"></button>
+            </div>
+        </form>
+        <hr />
+        <article class="recipe">
+            <img class="recipe-img" src="images/apple-crisp.jpg" alt="apple crisp">
+            <span>dessert</span>
+            <h2>Apple Crisp</h2>
+            <span
+                class="rating"
+                role="img"
+                aria-label="Rating: 4 out of 5 stars"
+            >
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star-empty">⭐</span>
+                <span aria-hidden="true" class="icon-star-empty">☆</span>
+            </span>
+        </article>
+    </main>
+    <footer>
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+        </div>
+        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons"
+        >Recipe icons created by Freepik - Flaticon</a>
+    </footer>
+</body>
+</html>
