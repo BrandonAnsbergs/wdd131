@@ -16,7 +16,7 @@
                 <h1>Fitness Tracker</h1>
             </a>
             <button class="menu-toggle" aria-label="Toggle navigation menu">
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
             <nav>
                 <ul>
@@ -39,17 +39,20 @@
 
         <div class="container">
             <section class="features">
-                <div class="feature">
-                    <h3>Easy Workout Logging</h3>
-                    <p>Quickly log your workouts with our simple, user-friendly interface. Keep track of exercise type, duration, and notes all in one place.</p>
-                </div>
-                <div class="feature">
-                    <h3>Track Your Progress</h3>
-                    <p>Visualize your fitness journey with progress charts and see how far you've come. Stay motivated by watching your improvements over time.</p>
-                </div>
-                <div class="feature">
-                    <h3>Fitness Resources</h3>
-                    <p>Access a library of exercises, nutrition advice, and fitness tips to help you optimize your workout routine and achieve better results.</p>
+                <h2>Key Features</h2>
+                <div class="feature-container">
+                    <div class="feature">
+                        <h3>Easy Workout Logging</h3>
+                        <p>Quickly log your workouts with our simple, user-friendly interface. Keep track of exercise type, duration, and notes all in one place.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Track Your Progress</h3>
+                        <p>Visualize your fitness journey with progress charts and see how far you've come. Stay motivated by watching your improvements over time.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Fitness Resources</h3>
+                        <p>Access a library of exercises, nutrition advice, and fitness tips to help you optimize your workout routine and achieve better results.</p>
+                    </div>
                 </div>
             </section>
 
@@ -83,7 +86,7 @@
                 </div>
                 
                 <div class="visualization-container">
-                    <canvas id="activityChart"></canvas>
+                    <canvas id="activityChart" aria-label="Workout activity chart" role="img"></canvas>
                 </div>
                 
                 <p class="no-workouts" id="noProgressMessage">Log your workouts to see your progress!</p>
