@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tips - Fitness Tracker</title>
+    <meta name="description" content="Expert tips to help you improve your fitness, nutrition, and overall wellness.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Fitness Tracker Logo">
+                <h1>Fitness Tracker</h1>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="track.html">Track</a></li>
+                    <li><a href="tips.html">Tips</a></li>
+                    <li><a href="exercises.html">Exercises</a></li>
+                    <li><a href="nutrition.html">Nutrition</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero tips-hero">
+            <div class="page-hero-content">
+                <h1>Fitness Tips</h1>
+                <p>Improve your fitness journey with these expert tips and strategies.</p>
+            </div>
+        </section>
+        
+        <div class="container">
+            <!-- Exercise-Based Fitness Tips -->
+            <section class="content-section">
+                <h2 class="section-title">Exercise-Based Tips</h2>
+                <div class="card-container">
+                    <article class="content-card full-width">
+                        <ul class="tips-list">
+                            <li><strong>Work on Mobility:</strong> Incorporate dynamic stretches and mobility drills into your warm-up to prevent injuries and improve range of motion.</li>
+                            <li><strong>Strengthen Rotator Cuff Muscles:</strong> These small muscles are key for shoulder stability. Include exercises like external rotations in your routine.</li>
+                            <li><strong>Focus on Lower Back and Core Strength:</strong> Strong lower back and core muscles are essential for balance, posture, and reducing the risk of back pain.</li>
+                            <li><strong>Use Proper Form:</strong> Perform complete repetitions with a controlled tempo to maximize effectiveness and reduce injury risk.</li>
+                            <li><strong>Progress Gradually:</strong> Avoid overloading your body too quickly. Gradual progression helps build strength and endurance sustainably.</li>
+                            <li><strong>Mix It Up:</strong> Avoid workout plateaus by varying your exercises and incorporating new routines.</li>
+                            <li><strong>Don't Neglect Cardio:</strong> Regular cardio sessions improve heart health, endurance, and calorie burn.</li>
+                            <li><strong>Track Your Workouts:</strong> Keep a log of your sessions to identify patterns and ensure progression.</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Nutrition-Based Fitness Tips -->
+            <section class="content-section">
+                <h2 class="section-title">Nutrition-Based Tips</h2>
+                <div class="card-container">
+                    <article class="content-card full-width">
+                        <ul class="tips-list">
+                            <li><strong>Know Your Macronutrients:</strong>
+                                <ul>
+                                    <li>Protein: 4 calories per gram.</li>
+                                    <li>Carbohydrates: 4 calories per gram.</li>
+                                    <li>Fats: 9 calories per gram.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Track Your Calories:</strong> Learn serving sizes and track your daily caloric intake to align with your fitness goals.</li>
+                            <li><strong>Hydration is Key:</strong> Stay hydrated throughout the day to maintain performance and recovery.</li>
+                            <li><strong>Prioritize Protein:</strong> Include high-quality protein sources in your diet to support muscle repair and growth.</li>
+                            <li><strong>Balance Your Meals:</strong> Incorporate a mix of proteins, healthy fats, and complex carbohydrates for sustained energy.</li>
+                            <li><strong>Avoid Processed Foods:</strong> Choose whole, nutrient-dense foods over highly processed snacks and meals.</li>
+                            <li><strong>Eat Post-Workout:</strong> Refuel with a combination of protein and carbs to support recovery and muscle repair.</li>
+                            <li><strong>Plan Ahead:</strong> Meal prep at the beginning of the week to stay consistent with your nutrition goals.</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <!-- General Tips -->
+            <section class="content-section">
+                <h2 class="section-title">General Fitness Tips</h2>
+                <div class="card-container">
+                    <article class="content-card full-width">
+                        <ul class="tips-list">
+                            <li><strong>Stay Consistent:</strong> Dedicate time to your fitness goals and stick to a routine for long-term success.</li>
+                            <li><strong>Rest and Recovery:</strong> Ensure you get enough sleep and include rest days to allow your body to recover.</li>
+                            <li><strong>Set Realistic Goals:</strong> Break your fitness journey into manageable milestones to stay motivated.</li>
+                            <li><strong>Track Your Progress:</strong> Use photos, measurements, or fitness apps to see how far you've come.</li>
+                            <li><strong>Find a Workout Buddy:</strong> Partnering with someone can boost motivation and accountability.</li>
+                            <li><strong>Stay Educated:</strong> Read reputable fitness resources to expand your knowledge and improve your training approach.</li>
+                            <li><strong>Celebrate Small Wins:</strong> Acknowledge and reward yourself for achieving milestones, no matter how small.</li>
+                            <li><strong>Adapt to Your Body:</strong> Listen to your body and modify workouts or nutrition as needed to meet changing goals.</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentYear"></span> | Fitness Tracker | Created by Brandon Ansbergs</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

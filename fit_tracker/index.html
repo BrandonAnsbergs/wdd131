@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker - Take Control of Your Fitness Journey</title>
+    <meta name="description" content="Track your workouts, monitor progress, and access fitness resources to achieve your health goals.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Fitness Tracker Logo">
+                <h1>Fitness Tracker</h1>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="track.html">Track</a></li>
+                    <li><a href="tips.html">Tips</a></li>
+                    <li><a href="exercises.html">Exercises</a></li>
+                    <li><a href="nutrition.html">Nutrition</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Take Control of Your Fitness Journey</h1>
+            <p>Log workouts, track progress, and access resources to help you achieve your health and fitness goals.</p>
+            <a href="track.html" class="btn">Get Started</a>
+        </section>
+
+        <div class="container">
+            <section class="features">
+                <div class="feature">
+                    <h3>Easy Workout Logging</h3>
+                    <p>Quickly log your workouts with our simple, user-friendly interface. Keep track of exercise type, duration, and notes all in one place.</p>
+                </div>
+                <div class="feature">
+                    <h3>Track Your Progress</h3>
+                    <p>Visualize your fitness journey with progress charts and see how far you've come. Stay motivated by watching your improvements over time.</p>
+                </div>
+                <div class="feature">
+                    <h3>Fitness Resources</h3>
+                    <p>Access a library of exercises, nutrition advice, and fitness tips to help you optimize your workout routine and achieve better results.</p>
+                </div>
+            </section>
+
+            <section class="progress-container">
+                <h2>Your Progress Overview</h2>
+                <div class="progress-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalWorkouts">0</div>
+                        <div class="stat-label">Total Workouts</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalMinutes">0</div>
+                        <div class="stat-label">Total Minutes</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="avgDuration">0</div>
+                        <div class="stat-label">Avg. Minutes/Workout</div>
+                    </div>
+                </div>
+                
+                <div class="visualization-controls">
+                    <h3>Workout Activity</h3>
+                    <div class="time-period-selector">
+                        <label for="timePeriod">View by:</label>
+                        <select id="timePeriod">
+                            <option value="day">Day</option>
+                            <option value="week" selected>Week</option>
+                            <option value="month">Month</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="visualization-container">
+                    <canvas id="activityChart"></canvas>
+                </div>
+                
+                <p class="no-workouts" id="noProgressMessage">Log your workouts to see your progress!</p>
+            </section>
+
+            <section class="testimonials">
+                <h2>What Others Are Saying</h2>
+                <div class="testimonial">
+                    <p>"This fitness tracker has completely transformed my workout routine. I'm finally able to see my progress and stay motivated!"</p>
+                    <div class="testimonial-author">- Alex M.</div>
+                </div>
+                <div class="testimonial">
+                    <p>"I love how easy it is to log my workouts and track my fitness journey. The exercise library has been super helpful for finding new workouts to try."</p>
+                    <div class="testimonial-author">- Jamie L.</div>
+                </div>
+            </section>
+
+            <section class="cta">
+                <h2>Ready to Start Your Fitness Journey?</h2>
+                <p>Join thousands of others who are taking control of their health and fitness with our easy-to-use tracking tools.</p>
+                <a href="track.html" class="btn">Log Your First Workout</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentYear"></span> | Fitness Tracker | Created by Brandon Ansbergs</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

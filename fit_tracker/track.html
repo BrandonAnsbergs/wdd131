@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Workouts - Fitness Tracker</title>
+    <meta name="description" content="Log your workouts, monitor your progress, and view your fitness history.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Fitness Tracker Logo">
+                <h1>Fitness Tracker</h1>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="track.html">Track</a></li>
+                    <li><a href="tips.html">Tips</a></li>
+                    <li><a href="exercises.html">Exercises</a></li>
+                    <li><a href="nutrition.html">Nutrition</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="page-title">Track Your Workouts</h1>
+            
+            <div class="workout-container">
+                <section class="workout-form">
+                    <h2>Log Your Workout</h2>
+                    <form id="workoutForm">
+                        <div class="form-group">
+                            <label for="workout-date">Date</label>
+                            <input type="date" id="workout-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="workout-type">Exercise Type</label>
+                            <select id="workout-type" required>
+                                <option value="">-- Select Exercise Type --</option>
+                                <option value="Cardio">Cardio</option>
+                                <option value="Strength">Strength Training</option>
+                                <option value="Flexibility">Flexibility</option>
+                                <option value="HIIT">HIIT</option>
+                                <option value="Yoga">Yoga</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="workout-duration">Duration (minutes)</label>
+                            <input type="number" id="workout-duration" min="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="workout-description">Notes (optional)</label>
+                            <textarea id="workout-description" placeholder="Describe your workout..."></textarea>
+                        </div>
+                        <button type="submit" class="btn">Add Workout</button>
+                    </form>
+                </section>
+
+                <section class="workout-log">
+                    <h2>Your Workout History</h2>
+                    <ul id="workoutList" class="workout-list">
+                        <!-- Workout entries will be dynamically added here -->
+                    </ul>
+                    <p id="noWorkoutsMessage" class="no-workouts">No workouts logged yet. Add your first workout!</p>
+                </section>
+            </div>
+
+            <section class="progress-container">
+                <h2>Your Progress Overview</h2>
+                <div class="progress-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalWorkouts">0</div>
+                        <div class="stat-label">Total Workouts</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalMinutes">0</div>
+                        <div class="stat-label">Total Minutes</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="avgDuration">0</div>
+                        <div class="stat-label">Avg. Minutes/Workout</div>
+                    </div>
+                </div>
+                
+                <div class="visualization-controls">
+                    <h3>Workout Activity</h3>
+                    <div class="time-period-selector">
+                        <label for="timePeriod">View by:</label>
+                        <select id="timePeriod">
+                            <option value="day">Day</option>
+                            <option value="week" selected>Week</option>
+                            <option value="month">Month</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="visualization-container">
+                    <canvas id="activityChart"></canvas>
+                </div>
+                
+                <p class="no-workouts" id="noProgressMessage">Log your workouts to see your progress!</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentYear"></span> | Fitness Tracker | Created by Brandon Ansbergs</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

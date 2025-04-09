@@ -1,0 +1,710 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0074D9;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #f4f4f4;
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+footer {
+    background-color: #0074D9;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+    margin-left: 0.5rem;
+}
+
+/* Hero sections for content pages */
+.page-hero {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+    z-index: 1;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 2; /* Places content above the overlay */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Specific hero images for each page */
+.exercises-hero {
+    background-image: url('images/exercises-hero.jpg');
+}
+
+.nutrition-hero {
+    background-image: url('images/nutrition-hero.jpg');
+}
+
+.tips-hero {
+    background-image: url('images/tips-hero.jpg');
+}
+
+/* Home Page Styles */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #0074D9;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #005bb5;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.feature {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.feature h3 {
+    color: #0074D9;
+    margin-bottom: 1rem;
+}
+
+.testimonials {
+    background-color: white;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.testimonial {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+}
+
+.testimonial:last-child {
+    margin-bottom: 0;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-author {
+    font-weight: bold;
+}
+
+.cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #0074D9;
+    color: white;
+    margin: 2rem 0;
+    border-radius: 8px;
+}
+
+.cta h2 {
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Track Page Styles */
+.page-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.workout-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.workout-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.workout-log {
+    flex: 2;
+    min-width: 300px;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.workout-list {
+    list-style: none;
+}
+
+.workout-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    position: relative;
+}
+
+.workout-date {
+    font-weight: bold;
+    color: #0074D9;
+}
+
+.workout-type {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.workout-duration {
+    margin-bottom: 0.5rem;
+}
+
+.workout-description {
+    margin-bottom: 0.5rem;
+}
+
+.delete-btn {
+    background-color: #ff4136;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #e60000;
+}
+
+.no-workouts {
+    text-align: center;
+    color: #777;
+    padding: 2rem;
+}
+
+/* Progress Visualization */
+.progress-container {
+    margin: 2rem 0;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.progress-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 1rem;
+    margin: 0.5rem;
+    min-width: 150px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0074D9;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.visualization-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.time-period-selector {
+    display: flex;
+    align-items: center;
+}
+
+.time-period-selector label {
+    margin-right: 0.5rem;
+    font-weight: normal;
+}
+
+.time-period-selector select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    min-width: 100px;
+}
+
+.visualization-container {
+    height: 300px;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.no-workouts {
+    text-align: center;
+    color: #777;
+    padding: 2rem;
+}
+
+/* Styles for Content Pages (Exercises, Nutrition, Tips) */
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-description {
+    max-width: 800px;
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.content-section {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    color: #0074D9;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e6e6e6;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.content-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 1rem;
+}
+
+.content-card h3 {
+    color: #0074D9;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.content-card ul {
+    margin-left: 1.5rem;
+}
+
+.content-card li {
+    margin-bottom: 0.5rem;
+}
+
+.content-card.full-width {
+    flex: 0 0 100%;
+    min-width: 100%;
+}
+
+.tips-list {
+    list-style-type: none;
+    margin-left: 0 !important;
+}
+
+.tips-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.tips-list li:last-child {
+    border-bottom: none;
+}
+
+.tips-list ul {
+    margin-top: 0.5rem;
+}
+
+.tips-list strong {
+    color: #0074D9;
+}
+
+/* Responsive Design for Dropdown Menu */
+@media (max-width: 768px) {
+    /* Menu Button Display */
+    .menu-toggle {
+        display: block;
+    }
+    
+    /* Navigation Menu */
+    nav {
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #0074D9;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    /* When menu is active */
+    nav.active {
+        max-height: 300px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    
+    nav li {
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    nav li:last-child {
+        border-bottom: none;
+    }
+    
+    nav a {
+        display: block;
+        padding: 1rem;
+    }
+    
+    /* Layout adjustments */
+    .header-content {
+        flex-wrap: wrap;
+    }
+    
+    .logo {
+        margin-right: auto;
+    }
+    
+    /* Other responsive adjustments */
+    .page-hero, .hero {
+        padding: 4rem 1.5rem;
+    }
+    
+    .page-hero h1, .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .page-hero p, .hero p {
+        font-size: 1rem;
+    }
+    
+    .features, .card-container {
+        flex-direction: column;
+    }
+    
+    .feature, .content-card {
+        margin: 0.5rem 0;
+        min-width: 100%;
+    }
+    
+    .workout-container {
+        flex-direction: column;
+    }
+    
+    .footer-content p {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .progress-stats {
+        flex-direction: column;
+    }
+    
+    .stat-card {
+        width: 100%;
+    }
+    
+    .visualization-controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+/* Tablet Specific Adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Menu Button Display */
+    .menu-toggle {
+        display: block;
+    }
+    
+    /* Navigation Menu */
+    nav {
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #0074D9;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    /* When menu is active */
+    nav.active {
+        max-height: 300px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    
+    nav li {
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    nav li:last-child {
+        border-bottom: none;
+    }
+    
+    nav a {
+        display: block;
+        padding: 1rem;
+    }
+    
+    /* Layout adjustments for tablets */
+    .header-content {
+        flex-wrap: wrap;
+    }
+    
+    .logo {
+        margin-right: auto;
+    }
+    
+    /* Other tablet-specific adjustments */
+    .content-card {
+        min-width: calc(50% - 1.5rem);
+    }
+    
+    .feature {
+        min-width: calc(50% - 2rem);
+    }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+    .container, .header-content, .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

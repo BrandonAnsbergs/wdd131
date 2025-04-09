@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises - Fitness Tracker</title>
+    <meta name="description" content="Learn about workout splits and exercises for every muscle group.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Fitness Tracker Logo">
+                <h1>Fitness Tracker</h1>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="track.html">Track</a></li>
+                    <li><a href="tips.html">Tips</a></li>
+                    <li><a href="exercises.html">Exercises</a></li>
+                    <li><a href="nutrition.html">Nutrition</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero exercises-hero">
+            <div class="page-hero-content">
+                <h1>Find Your Ideal Workout</h1>
+                <p>Explore workout splits and exercises tailored to each muscle group.</p>
+            </div>
+        </section>
+        
+        <div class="container">
+            <!-- Workout Splits -->
+            <section class="content-section">
+                <h2 class="section-title">Workout Splits</h2>
+                <div class="card-container">
+                    <article class="content-card">
+                        <h3>Full Body</h3>
+                        <p>A great option for beginners or those with limited workout days. Each session targets multiple muscle groups.</p>
+                        <ul>
+                            <li>Example exercises: Squats, Bench Press, Deadlifts, Pull-Ups</li>
+                        </ul>
+                    </article>
+                    <article class="content-card">
+                        <h3>Upper/Lower Split</h3>
+                        <p>Alternate between upper body and lower body workouts. Rest, then repeat. Ideal for intermediate lifters.</p>
+                        <ul>
+                            <li>Example Upper Body: Pull-Ups, Bench Press, Overhead Press</li>
+                            <li>Example Lower Body: Squats, Lunges, Romanian Deadlifts</li>
+                        </ul>
+                    </article>
+                    <article class="content-card">
+                        <h3>Push, Pull, Legs</h3>
+                        <p>Three-day rotation focusing on specific muscle groups. Perfect for building strength and hypertrophy.</p>
+                        <ul>
+                            <li>Push (Chest, Shoulders, Triceps): Bench Press, Shoulder Press</li>
+                            <li>Pull (Back, Biceps): Deadlifts, Pull-Ups</li>
+                            <li>Legs (Quads, Hamstrings, Glutes): Squats, Bulgarian Split Squats</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Exercise Selection -->
+            <section class="content-section">
+                <h2 class="section-title">Exercise Selection by Muscle Group</h2>
+                <div class="card-container">
+                    <article class="content-card">
+                        <h3>Chest</h3>
+                        <ul>
+                            <li>Bench Press</li>
+                            <li>Dumbbell Bench press</li>
+                            <li>Push-Ups</li>
+                            <li>Incline Bench Press</li>
+                            <li>Dips</li>
+                        </ul>
+                    </article>
+                    <article class="content-card">
+                        <h3>Back</h3>
+                        <ul>
+                            <li>Pull-Ups</li>
+                            <li>Deadlifts</li>
+                            <li>Barbell Rows</li>
+                            <li>Cable Rows</li>
+                            <li>Dumbbell Rows</li>
+                        </ul>
+                    </article>
+                    <article class="content-card">
+                        <h3>Shoulders</h3>
+                        <ul>
+                            <li>Overhead Press</li>
+                            <li>Lateral Raises</li>
+                            <li>Face Pulls</li>
+                            <li>Y raises</li>
+                            <li>Dumbbell shoulder press</li>
+                        </ul>
+                    </article>
+                    <article class="content-card">
+                        <h3>Legs</h3>
+                        <ul>
+                            <li>Squats</li>
+                            <li>Lunges</li>
+                            <li>Romanian Deadlifts</li>
+                            <li>Bulgarian split Squats</li>
+                            <li>Leg Extensions</li>
+                            <li>Hamstring Curls</li>
+                        </ul>
+                    </article>
+                    <article class="content-card">
+                        <h3>Arms</h3>
+                        <ul>
+                            <li>Bicep Curls</li>
+                            <li>Overhead tricep Extensions</li>
+                            <li>Rope tricep Extensions</li>
+                            <li>Hammer Curls</li>
+                        </ul>
+                    </article>
+                    <article class="content-card">
+                        <h3>Core</h3>
+                        <ul>
+                            <li>Planks</li>
+                            <li>Russian Twists</li>
+                            <li>Leg Raises</li>
+                            <li>Back Hyperextensions</li>
+                            <li>Decline Crunches</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentYear"></span> | Fitness Tracker | Created by Brandon Ansbergs</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

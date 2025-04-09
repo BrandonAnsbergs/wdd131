@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition - Fitness Tracker</title>
+    <meta name="description" content="Learn about essential macronutrients and the best food sources for each.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Fitness Tracker Logo">
+                <h1>Fitness Tracker</h1>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="track.html">Track</a></li>
+                    <li><a href="tips.html">Tips</a></li>
+                    <li><a href="exercises.html">Exercises</a></li>
+                    <li><a href="nutrition.html">Nutrition</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero nutrition-hero">
+            <div class="page-hero-content">
+                <h1>Nutrition Basics</h1>
+                <p>Discover the key macronutrients and how they fuel your body. Choose the best foods to complement your fitness journey!</p>
+            </div>
+        </section>
+        
+        <div class="container">
+            <!-- Macronutrients Overview -->
+            <section class="content-section">
+                <h2 class="section-title">What Are Macronutrients?</h2>
+                <div class="card-container">
+                    <article class="content-card full-width">
+                        <p>Macronutrients are nutrients your body needs in large amounts to function. They include proteins, fats, and carbohydrates. Each serves a unique purpose in maintaining your health and fitness.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Protein Section -->
+            <section class="content-section">
+                <h2 class="section-title">Protein</h2>
+                <div class="card-container">
+                    <article class="content-card full-width">
+                        <p>Proteins are essential for building and repairing muscles, enzymes, and hormones. They are a cornerstone of any fitness-focused diet.</p>
+                        <h3>Examples of Protein-Rich Foods</h3>
+                        <ul>
+                            <li>Chicken, turkey, lean beef</li>
+                            <li>Fish and seafood (e.g., salmon, tuna, shrimp)</li>
+                            <li>Eggs</li>
+                            <li>Greek yogurt, cottage cheese</li>
+                            <li>Tofu, tempeh, edamame (plant-based options)</li>
+                            <li>Legumes (e.g., lentils, chickpeas, black beans)</li>
+                            <li>Nuts and seeds (e.g., almonds, sunflower seeds)</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Carbohydrates Section -->
+            <section class="content-section">
+                <h2 class="section-title">Carbohydrates</h2>
+                <div class="card-container">
+                    <article class="content-card full-width">
+                        <p>Carbohydrates are your body's primary source of energy. They fuel workouts and aid in recovery.</p>
+                        <h3>Examples of Carbohydrate-Rich Foods</h3>
+                        <ul>
+                            <li>Whole grains (e.g., oats, brown rice, quinoa)</li>
+                            <li>Fruits (e.g., bananas, apples, berries)</li>
+                            <li>Vegetables (e.g., sweet potatoes, broccoli, carrots)</li>
+                            <li>Legumes (e.g., lentils, black beans)</li>
+                            <li>Dairy (e.g., milk, yogurt)</li>
+                            <li>Pasta, bread (opt for whole-grain options)</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Fats Section -->
+            <section class="content-section">
+                <h2 class="section-title">Fats</h2>
+                <div class="card-container">
+                    <article class="content-card full-width">
+                        <p>Fats are crucial for hormone production, nutrient absorption, and energy. Choose healthy fats to support overall health.</p>
+                        <h3>Examples of Healthy Fat Sources</h3>
+                        <ul>
+                            <li>Avocados</li>
+                            <li>Nuts and seeds (e.g., walnuts, chia seeds, flaxseeds)</li>
+                            <li>Fatty fish (e.g., salmon, mackerel, sardines)</li>
+                            <li>Olive oil, coconut oil</li>
+                            <li>Dark chocolate (in moderation)</li>
+                            <li>Nut butters (e.g., almond butter, peanut butter)</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Balanced Nutrition -->
+            <section class="content-section">
+                <h2 class="section-title">Tips for Balanced Nutrition</h2>
+                <div class="card-container">
+                    <article class="content-card full-width">
+                        <p>To optimize your diet:</p>
+                        <ul>
+                            <li>Include a mix of all three macronutrients in each meal.</li>
+                            <li>Focus on whole, minimally processed foods.</li>
+                            <li>Stay hydrated and monitor portion sizes.</li>
+                            <li>Adjust intake based on your fitness goals (e.g., muscle gain, fat loss).</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentYear"></span> | Fitness Tracker | Created by Brandon Ansbergs</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
